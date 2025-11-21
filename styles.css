@@ -1,3 +1,15 @@
+/* Brand palette */
+:root {
+  --mb-sand: #FFFAE5;      /* light sand */
+  --mb-reef: #12544F;      /* primary teal */
+  --mb-sea-mist: #99C1CC;  /* soft blue/sea mist */
+  --mb-soil: #543723;      /* dark brown */
+  --mb-sun: #F7BF6B;       /* accent yellow/orange */
+
+  --mb-bg: #f4f7fa;        /* page background */
+  --mb-text: #12212f;      /* main text */
+}
+
 /* Base reset / typography */
 *,
 *::before,
@@ -9,14 +21,14 @@ body {
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  background: #f4f7fa;
-  color: #12212f;
+  background: var(--mb-bg);
+  color: var(--mb-text);
 }
 
 /* Header */
 
 .mbkh-header {
-  background: #005b7f;
+  background: var(--mb-reef);
   color: #fff;
   padding: 1rem 1.5rem;
 }
@@ -71,7 +83,7 @@ body {
 
 .search-input:focus,
 .select-input:focus {
-  outline: 2px solid #0d8ac1;
+  outline: 2px solid var(--mb-sea-mist);
   outline-offset: 1px;
 }
 
@@ -95,7 +107,7 @@ body {
 
 .toggle-btn.active {
   background: #ffffff;
-  color: #005b7f;
+  color: var(--mb-reef);
 }
 
 /* Summary */
@@ -127,7 +139,7 @@ body {
 .card h2 {
   font-size: 1rem;
   margin: 0;
-  color: #03415a;
+  color: var(--mb-reef);
 }
 
 .badge-row {
@@ -138,7 +150,8 @@ body {
 }
 
 .badge {
-  background: #e0edf3;
+  background: var(--mb-sea-mist);
+  color: var(--mb-reef);
   border-radius: 999px;
   padding: 0.12rem 0.55rem;
   white-space: nowrap;
@@ -157,7 +170,7 @@ body {
 
 .card a {
   font-size: 0.85rem;
-  color: #005b7f;
+  color: var(--mb-reef);
   text-decoration: none;
   margin-top: 0.2rem;
 }
@@ -190,7 +203,7 @@ body {
 }
 
 .results-table-wrapper thead {
-  background: #e4edf3;
+  background: var(--mb-sea-mist);
 }
 
 .results-table-wrapper tbody tr:nth-child(even) {
@@ -198,7 +211,7 @@ body {
 }
 
 .results-table-wrapper a {
-  color: #005b7f;
+  color: var(--mb-reef);
   text-decoration: none;
 }
 
@@ -218,11 +231,11 @@ body {
 /* Footer */
 
 .mbkh-footer {
-  border-top: 1px solid #d0dde7;
+  border-top: 1px solid var(--mb-sea-mist);
   padding: 0.8rem 1.5rem 1.2rem;
   font-size: 0.8rem;
-  color: #5b6c79;
-  background: #f0f4f8;
+  color: var(--mb-soil);
+  background: var(--mb-sand);
 }
 
 .mbkh-footer p {
