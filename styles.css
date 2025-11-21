@@ -1,0 +1,240 @@
+/* Base reset / typography */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #f4f7fa;
+  color: #12212f;
+}
+
+/* Header */
+
+.mbkh-header {
+  background: #005b7f;
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+
+.mbkh-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.mbkh-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.mbkh-header p {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Main layout */
+
+.mbkh-main {
+  max-width: 1100px;
+  margin: 1.5rem auto 2rem;
+  padding: 0 1rem;
+}
+
+/* Controls */
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.search-input,
+.select-input {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccd4dd;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.search-input:focus,
+.select-input:focus {
+  outline: 2px solid #0d8ac1;
+  outline-offset: 1px;
+}
+
+/* View toggle */
+
+.view-toggle {
+  display: inline-flex;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.toggle-btn {
+  border: none;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  background: transparent;
+  color: #e4f5ff;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: #ffffff;
+  color: #005b7f;
+}
+
+/* Summary */
+
+.summary-text {
+  font-size: 0.85rem;
+  color: #4a5b67;
+  margin-bottom: 0.75rem;
+}
+
+/* Card grid */
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.9rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  box-shadow: 0 2px 4px rgba(10, 33, 54, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.card h2 {
+  font-size: 1rem;
+  margin: 0;
+  color: #03415a;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+}
+
+.badge {
+  background: #e0edf3;
+  border-radius: 999px;
+  padding: 0.12rem 0.55rem;
+  white-space: nowrap;
+}
+
+.card .citation,
+.card .description {
+  font-size: 0.85rem;
+  margin: 0.15rem 0;
+}
+
+.card .meta {
+  font-size: 0.8rem;
+  color: #667683;
+}
+
+.card a {
+  font-size: 0.85rem;
+  color: #005b7f;
+  text-decoration: none;
+  margin-top: 0.2rem;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Table view */
+
+.results-table-wrapper {
+  margin-top: 0.75rem;
+  overflow-x: auto;
+}
+
+.results-table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(10, 33, 54, 0.08);
+}
+
+.results-table-wrapper th,
+.results-table-wrapper td {
+  padding: 0.55rem 0.7rem;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.results-table-wrapper thead {
+  background: #e4edf3;
+}
+
+.results-table-wrapper tbody tr:nth-child(even) {
+  background: #f6f9fb;
+}
+
+.results-table-wrapper a {
+  color: #005b7f;
+  text-decoration: none;
+}
+
+.results-table-wrapper a:hover {
+  text-decoration: underline;
+}
+
+/* No results */
+
+.no-results {
+  padding: 1.2rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Footer */
+
+.mbkh-footer {
+  border-top: 1px solid #d0dde7;
+  padding: 0.8rem 1.5rem 1.2rem;
+  font-size: 0.8rem;
+  color: #5b6c79;
+  background: #f0f4f8;
+}
+
+.mbkh-footer p {
+  max-width: 1100px;
+  margin: 0.3rem auto 0;
+}
+
+/* Small screens */
+
+@media (max-width: 600px) {
+  .mbkh-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MBKH Metadata Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="mbkh-header">
+      <div class="mbkh-header-inner">
+        <div>
+          <h1>Moreton Bay Knowledge Library</h1>
+          <p>
+            Explore curated datasets, reports, maps and other resources for Moreton Bay.
+          </p>
+        </div>
+        <div class="view-toggle" role="radiogroup" aria-label="View mode">
+          <button id="cardViewBtn" class="toggle-btn active" data-view="cards">
+            Cards
+          </button>
+          <button id="tableViewBtn" class="toggle-btn" data-view="table">
+            Table
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="mbkh-main">
+      <section class="controls">
+        <input
+          id="searchInput"
+          type="search"
+          class="search-input"
+          placeholder="Search by title, citation, keywords or description…"
+          autocomplete="off"
+        />
+
+        <select id="categoryFilter" class="select-input">
+          <option value="">All categories</option>
+        </select>
+
+        <select id="yearFilter" class="select-input">
+          <option value="">All years</option>
+        </select>
+      </section>
+
+      <section id="summary" class="summary-text"></section>
+
+      <!-- Card view -->
+      <section id="cardResults" class="results-grid"></section>
+
+      <!-- Table view -->
+      <section id="tableResults" class="results-table-wrapper" hidden>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Time period</th>
+              <th>Keywords</th>
+              <th>Custodian</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="mbkh-footer">
+      <p>
+        Compiled by The Moreton Bay Foundation and collaborators. Metadata only; please
+        follow links for authoritative sources.
+      </p>
+    </footer>
+
+    <script type="module" src="myjs.js"></script>
+  </body>
+</html>
