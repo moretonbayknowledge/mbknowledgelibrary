@@ -41,6 +41,26 @@ body {
   justify-content: space-between;
   gap: 1rem;
 }
+.mbkh-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Add this here */
+.tmbf-logo {
+  height: 55px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.title-block {
+  display: flex;
+  flex-direction: column;
+}
 
 .mbkh-header h1 {
   margin: 0;
@@ -250,4 +270,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
+
+    .tmbf-logo {
+    height: 40px;
 }
